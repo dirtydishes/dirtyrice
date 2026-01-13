@@ -47,9 +47,14 @@ App bundles (created so macOS privacy UI actually lists them):
 
 ### The quick “reset everything”
 
-- `yabai --restart-service`
-- `skhd --restart-service`
-- `sketchybar --reload`
+From your terminal:
+
+- `launchctl kickstart -k gui/$(id -u)/com.koekeishiya.yabai`
+- `launchctl kickstart -k gui/$(id -u)/com.koekeishiya.skhd`
+- `launchctl kickstart -k gui/$(id -u)/homebrew.mxcl.borders`
+- `launchctl kickstart -k gui/$(id -u)/homebrew.mxcl.sketchybar`
+
+(Your `Hyper + Escape` hotkey runs the same style of restart.)
 
 ### yabai
 

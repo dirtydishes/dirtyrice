@@ -5,7 +5,7 @@ ctrl + alt + cmd + shift - space  : open -g "raycast://extensions/raycast/raycas
 ctrl + alt + cmd + shift - return : open -na Ghostty
 
 # Service reload
-ctrl + alt + cmd + shift - escape : yabai --restart-service; skhd --restart-service; sketchybar --reload
+ctrl + alt + cmd + shift - escape : /bin/sh -lc 'uid=$(id -u); launchctl kickstart -k gui/$uid/com.koekeishiya.yabai >/dev/null 2>&1 || true; launchctl kickstart -k gui/$uid/homebrew.mxcl.borders >/dev/null 2>&1 || true; launchctl kickstart -k gui/$uid/homebrew.mxcl.sketchybar >/dev/null 2>&1 || true; launchctl kickstart -k gui/$uid/com.koekeishiya.skhd >/dev/null 2>&1 || true'
 
 # Ghostty tab workaround: balance after Cmd+T
 cmd - t -> [
