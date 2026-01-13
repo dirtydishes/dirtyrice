@@ -51,6 +51,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
 
 ## Install / Update
 
+### Option A (recommended): symlinks via Stow
+
 Dry-run first:
 
 ```sh
@@ -67,6 +69,22 @@ To remove symlinks later:
 
 ```sh
 stow -D -v -d stow -t "$HOME" zsh yabai skhd borders ghostty sketchybar
+```
+
+### Option B: copy files (no symlinks)
+
+If you prefer a plain “just files” layout, use `dotfiles/` (it mirrors `$HOME`):
+
+- Copy everything:
+
+```sh
+rsync -a dotfiles/ "$HOME"/
+```
+
+- Or copy just one component, e.g. SketchyBar:
+
+```sh
+rsync -a dotfiles/.config/sketchybar/ "$HOME/.config/sketchybar"/
 ```
 
 ## Notes
