@@ -1,4 +1,4 @@
-# deltarice
+# dirtyrice
 
 My personal macOS “rice” setup.
 
