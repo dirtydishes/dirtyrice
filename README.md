@@ -90,6 +90,7 @@ rsync -a dotfiles/.config/sketchybar/ "$HOME/.config/sketchybar"/
 ## Notes
 
 - If `stow` complains about conflicts, you likely already have a real file where the symlink wants to go. Move it out of the way first.
+- Animations + HUD: controlled by `yabai` (`window_animation_duration`, `window_animation_easing`) and SketchyBar’s `mode_hud` event.
 - Some configs may include machine-specific paths. Search for your username and update as needed:
 
 ```sh

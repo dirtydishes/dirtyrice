@@ -38,6 +38,7 @@ sketchybar --default \
 sketchybar --add event yabai_window_focused
 sketchybar --add event yabai_space_changed
 sketchybar --add event yabai_front_app_switched
+sketchybar --add event mode_hud
 
 # Spaces (1–5)
 for i in 1 2 3 4 5; do
@@ -71,6 +72,19 @@ sketchybar --add item front_app center \
     label.max_chars=26 \
     script="$CONFIG_DIR/scripts/front_app.sh" \
   --subscribe front_app front_app_switched yabai_window_focused yabai_front_app_switched
+
+# Mode HUD (briefly shows RESIZE/WARP/MOVE/etc)
+sketchybar --add item mode_hud center \
+  --set mode_hud \
+    icon.drawing=off \
+    label="" \
+    drawing=off \
+    background.color=$ITEM_BG \
+    background.border_color=$CLEAR \
+    label.padding_left=12 \
+    label.padding_right=12 \
+    script="$CONFIG_DIR/scripts/mode_hud.sh" \
+  --subscribe mode_hud mode_hud
 
 # Now playing (shows only when active)
 sketchybar --add item now_playing right \

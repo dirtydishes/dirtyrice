@@ -20,7 +20,8 @@ if command -v yabai >/dev/null 2>&1; then
     right_padding                12 \
     menubar_opacity              0.0 \
     window_shadow                off \
-    window_animation_duration    0.15 \
+    window_animation_duration    0.24 \
+    window_animation_easing      ease_in_out_circ \
     window_opacity_duration      0.10 \
     window_opacity               on \
     active_window_opacity        1.0 \
