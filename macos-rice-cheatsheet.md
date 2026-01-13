@@ -115,7 +115,7 @@ Notes:
 
 Config file: `~/.skhdrc`
 
-**Hyper** = `ctrl + alt + cmd + shift` (Caps Lock)
+**Hyper** = `ctrl + alt + cmd + shift` (Caps Lock via Hyperkey)
 
 ### Global keys
 

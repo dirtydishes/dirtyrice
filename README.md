@@ -87,6 +87,26 @@ rsync -a dotfiles/ "$HOME"/
 rsync -a dotfiles/.config/sketchybar/ "$HOME/.config/sketchybar"/
 ```
 
+## Hotkeys
+
+This setup expects a “Hyper key” on Caps Lock.
+
+- `~/.skhdrc` binds Hyper as `ctrl + alt + cmd + shift`.
+- Recommended: configure Hyperkey (or Karabiner) to map **Caps Lock → ctrl+alt+cmd+shift**.
+- Quick sanity check: press `Hyper + 9` to create `/tmp/skhd_hotkey_ok` (fallback: `Cmd+Shift+9`).
+
+## Permissions
+
+System Settings → Privacy & Security:
+
+- **Accessibility**: allow `Skhd.app`, `Yabai.app`, `Borders.app`, and `Hyperkey.app`
+- **Input Monitoring**: allow `Skhd.app` (and `Hyperkey.app` if you use it)
+- **Screen Recording**: allow `Yabai.app` (needed for window animations)
+
+If hotkeys stop working inside a terminal:
+
+- Disable **Secure Keyboard Entry** in that terminal app.
+
 ## Notes
 
 - If `stow` complains about conflicts, you likely already have a real file where the symlink wants to go. Move it out of the way first.
