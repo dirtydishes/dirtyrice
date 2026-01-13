@@ -45,6 +45,16 @@ if command -v yabai >/dev/null 2>&1; then
     yabai -m signal --add label=sketchybar_front_app event=application_front_switched action="sketchybar --trigger yabai_front_app_switched"
   fi
 
+  if command -v borders >/dev/null 2>&1; then
+    yabai -m signal --remove label=borders_refresh_window_focused 2>/dev/null || true
+    yabai -m signal --remove label=borders_refresh_space_changed 2>/dev/null || true
+    yabai -m signal --remove label=borders_refresh_front_app 2>/dev/null || true
+
+    yabai -m signal --add label=borders_refresh_window_focused event=window_focused action="$HOME/.config/borders/bordersrc"
+    yabai -m signal --add label=borders_refresh_space_changed event=space_changed action="$HOME/.config/borders/bordersrc"
+    yabai -m signal --add label=borders_refresh_front_app event=application_front_switched action="$HOME/.config/borders/bordersrc"
+  fi
+
   YABAI_BIN="/Users/kell/Applications/Yabai.app/Contents/MacOS/yabai"
   if [ -x "$YABAI_BIN" ]; then
     yabai -m signal --remove label=yabai_sa_dock_restart 2>/dev/null || true
