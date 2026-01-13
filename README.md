@@ -23,6 +23,15 @@ My personal macOS “rice” setup.
 - Shell: [Oh My Zsh](https://ohmyz.sh/), [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - Theme: [Catppuccin](https://catppuccin.com/) (Mocha + Lavender)
 
+**Install (Homebrew):**
+
+```sh
+brew install stow yabai skhd sketchybar borders jq
+brew install --cask ghostty raycast karabiner-elements
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono-nerd-font
+```
+
 ## The Rice
 
 Catppuccin **Mocha** with **Lavender** accents across the stack.
