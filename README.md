@@ -42,10 +42,17 @@ Sanity check:
 - Press `Hyper + 9` to create `/tmp/skhd_hotkey_ok` (fallback: `Cmd+Shift+9`).
 - If the fallback works but Hyper doesn’t: enable **Input Monitoring** for **Karabiner-Elements** (and `Skhd.app`).
 
+Default launcher binds in `~/.skhdrc`:
+
+- `Hyper + Space` opens a new QSpace Pro window.
+- `Hyper + Return` opens a new Ghostty window.
+- `Hyper + O` toggles window borders on/off by stopping/starting the `borders` service.
+
 ## Downloads / Links (manual / reference)
 
 - Hyper key: [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
-- Launcher: [Raycast](https://www.raycast.com/)
+- File manager launcher: QSpace Pro
+- App launcher (optional): [Raycast](https://www.raycast.com/)
 - Terminal: [Ghostty](https://ghostty.org/)
 - Font: [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
 - WM + hotkeys: [yabai](https://github.com/koekeishiya/yabai), [skhd](https://github.com/koekeishiya/skhd)
@@ -182,6 +189,8 @@ If hotkeys stop working inside a terminal:
 
 - If `stow` complains about conflicts, you likely already have a real file where the symlink wants to go. Move it out of the way first.
 - Animations + HUD: controlled by `yabai` (`window_animation_duration`, `window_animation_easing`) and SketchyBar’s `mode_hud` event.
+- Secondary-display padding fix: `~/.config/yabai/apply-secondary-padding.sh` sets equal padding on all four sides for non-primary display spaces (default `12`) so borders do not clip.
+- Floating rules in `~/.yabairc`: CleanShot X, Finder windows, and standard macOS Open/Save dialogs are set to `manage=off` so they stay floating.
 - Some configs may include machine-specific paths. Search for your username and update as needed:
 
 ```sh
