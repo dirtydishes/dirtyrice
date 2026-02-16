@@ -1,7 +1,7 @@
 # Hyper = ctrl + alt + cmd + shift (Caps Lock)
 
 # Launchers
-ctrl + alt + cmd + shift - space  : open -g "raycast://extensions/raycast/raycast/search"
+ctrl + alt + cmd + shift - space  : open -na "QSpace Pro"
 ctrl + alt + cmd + shift - return : open -na Ghostty
 
 # Service reload
@@ -20,6 +20,8 @@ cmd + shift - 9             : /usr/bin/touch /tmp/skhd_hotkey_ok
 
 # Toggle SketchyBar visibility (to access the macOS menu bar icons)
 ctrl + alt + cmd + shift - b : sh -lc 'if [ "$(sketchybar --query bar | jq -r .hidden)" = "on" ]; then sketchybar --bar hidden=off; else sketchybar --bar hidden=on; fi'
+# Toggle borders visibility
+ctrl + alt + cmd + shift - o : /bin/sh -lc 'if pgrep -x borders >/dev/null 2>&1; then brew services stop borders >/dev/null 2>&1; else brew services start borders >/dev/null 2>&1; fi'
 
 # Menu bar access: toggle real macOS menu bar visibility
 # - When enabling menu bar: show it (opacity=1) and hide SketchyBar
